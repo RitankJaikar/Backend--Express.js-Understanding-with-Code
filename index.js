@@ -131,6 +131,14 @@ app.post("/register",(req,res)=>{
 
 
 
+var methodOverride = require('method-override');    //used to override POST request to PUT, PATCH, DELETE etc.
+app.use(methodOverride('_method'));    //finds _method in query string and override accodingly
+//e.g. html form-> <form method="POST" action="/user/<%= user.id %>?_method=DELETE">
+                //overrides POST request with DELETE request
+
+
+
+
 //inseting random data(using faker) to MySQL database though node(using MySQL2 package)
 const { faker } = require('@faker-js/faker');
 //generates random data i.e. id, name, email, image, password, birthdate, registration date, etc.
