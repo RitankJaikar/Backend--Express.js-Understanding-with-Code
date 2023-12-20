@@ -137,6 +137,13 @@ app.use(methodOverride('_method'));    //finds _method in query string and overr
                 //overrides POST request with DELETE request
 
 
+//REST API requsets types to perform CURD operations- GET, POST, PATCH, DELETE
+//app.get()- to show/read
+//app.post()- to create
+//app.pach()- to update/edit
+//app.delete()- to destroy/delete
+
+
 const { v4: uuidv4 } = require('uuid');     //used to create unique id
 //e.g. uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 
