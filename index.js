@@ -137,6 +137,10 @@ app.use(methodOverride('_method'));    //finds _method in query string and overr
                 //overrides POST request with DELETE request
 
 
+const { v4: uuidv4 } = require('uuid');     //used to create unique id
+//e.g. uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+
+
 
 
 //inseting random data(using faker) to MySQL database though node(using MySQL2 package)
